@@ -4,6 +4,9 @@ import (
 	"errors"
 )
 
+var (
+	ErrConfigNotLoaded = errors.New("config file was not loaded correctly or it does not exist")
+)
 const (
 	JsonConfigFileName       = "space.json"
 	SpaceServerPort          = "space/rpcPort"
@@ -38,9 +41,6 @@ const (
 	LogLevel                 = "Space/LogLevel"
 )
 
-var (
-	ErrConfigNotLoaded = errors.New("config file was not loaded correctly or it does not exist")
-)
 
 type Flags struct {
 	Ipfsaddr               string
@@ -70,6 +70,7 @@ type Flags struct {
 	BuckdGatewayPort       int
 	LogLevel               string
 }
+
 
 // Config used to fetch config information
 type Config interface {
