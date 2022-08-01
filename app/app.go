@@ -3,24 +3,17 @@ package app
 import (
 	"context"
 	"fmt"
-
 	"github.com/FleekHQ/space-daemon/core/space/fuse/installer"
-
 	"github.com/FleekHQ/space-daemon/core/search/bleve"
 	"github.com/pkg/errors"
-
 	"github.com/FleekHQ/space-daemon/core"
 	"github.com/FleekHQ/space-daemon/grpc"
-
 	"github.com/FleekHQ/space-daemon/core/space/fuse"
 	"github.com/FleekHQ/space-daemon/core/vault"
-
 	"github.com/FleekHQ/space-daemon/core/fsds"
-
 	"github.com/FleekHQ/space-daemon/core/spacefs"
 	textile "github.com/FleekHQ/space-daemon/core/textile"
 	"github.com/FleekHQ/space-daemon/core/textile/hub"
-
 	"github.com/FleekHQ/space-daemon/core/env"
 	"github.com/FleekHQ/space-daemon/core/space"
 
